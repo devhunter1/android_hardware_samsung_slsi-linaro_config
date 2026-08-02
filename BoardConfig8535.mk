@@ -22,4 +22,7 @@ BOARD_GRALLOC_INIT_AFBC := true
 BOARD_USES_GRALLOC_ION_SYNC := true
 BOARD_USES_MFC_CHROMA_VALIGN := true
 
+# HWC
+BOARD_USES_VIRTUAL_DISPLAY := true
+
 include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk
