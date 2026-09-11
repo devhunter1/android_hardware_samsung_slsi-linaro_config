@@ -44,3 +44,7 @@ endif
 ifeq ($(BOARD_USES_MFC_CHROMA_VALIGN), true)
 $(call soong_config_set_bool,arm_gralloc,mfc_chroma_valign,true)
 endif
+
+ifeq ($(BOARD_PRODUCT_VENDOR_T), true)
+$(call soong_config_set_bool,arm_gralloc,gralloc_product_vendor_version,true)
+endif
