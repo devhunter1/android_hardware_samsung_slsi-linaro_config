@@ -44,3 +44,9 @@ endif
 ifeq ($(BOARD_USES_MFC_CHROMA_VALIGN), true)
 $(call soong_config_set_bool,arm_gralloc,mfc_chroma_valign,true)
 endif
+
+# Prebuilt vendor blobs that read the buffer handle directly still expect the
+# gralloc3 private_handle_t layout (older Exynos SoCs, e.g. exynos9820).
+ifeq ($(BOARD_GRALLOC4_LEGACY_V3_HANDLE), true)
+$(call soong_config_set_bool,arm_gralloc,gralloc3_compat_handle,true)
+endif
