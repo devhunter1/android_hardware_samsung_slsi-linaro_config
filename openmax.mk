@@ -103,6 +103,10 @@ ifeq ($(BOARD_USE_SKYPE_HD), true)
 $(call soong_config_set_bool,openmax,USE_SKYPE_HD,true)
 endif
 
+ifeq ($(BOARD_DEC_USE_VIDEO_DECODER_USAGE), true)
+$(call soong_config_set_bool,openmax,DEC_USE_VIDEO_DECODER_USAGE,true)
+endif
+
 ifeq ($(BOARD_USE_FULL_ST2094_40), true)
 $(call soong_config_set_bool,openmax,USE_FULL_ST2094_40,true)
 $(call soong_config_set_bool,exynos_headers_c2,full_st2094_40,true)
