@@ -9,6 +9,10 @@ ifeq ($(BOARD_GPU_SUPPORT_AFBC_BASIC), true)
 $(call soong_config_set_bool,arm_gralloc,mali_gpu_support_afbc_basic,true)
 endif
 
+ifeq ($(BOARD_GRALLOC_DPU_NO_AFBC), true)
+$(call soong_config_set_bool,arm_gralloc,dpu_no_afbc,true)
+endif
+
 ifeq ($(BOARD_GRALLOC_DPU_SUPPORT_1010102_AFBC), true)
 $(call soong_config_set_bool,arm_gralloc,dpu_support_1010102_afbc,true)
 endif
