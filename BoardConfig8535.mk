@@ -1,0 +1,31 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+TARGET_LINUX_KERNEL_VERSION := 5.15
+
+TARGET_SOC_BASE := s5e8535
+
+# Acryl
+BOARD_LIBACRYL_DEFAULT_SCALER := mscl_9810
+
+# Codec2
+BOARD_USE_CSC_FILTER := true
+BOARD_UNSUPPORT_10BIT := true
+BOARD_USE_FULL_ST2094_40 := true
+
+# Gralloc
+BOARD_USES_EXYNOS_GRALLOC_VERSION := 4
+BOARD_EXYNOS_S10B_FORMAT_ALIGN := 64
+BOARD_GPU_SUPPORT_AFBC_BASIC := true
+BOARD_GRALLOC_DPU_NO_AFBC := true
+BOARD_GRALLOC_INIT_AFBC := true
+BOARD_USES_GRALLOC_ION_SYNC := true
+BOARD_USES_MFC_CHROMA_VALIGN := true
+BOARD_PRODUCT_VENDOR_T := true
+
+# HWC
+BOARD_USES_VIRTUAL_DISPLAY := true
+
+include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk
